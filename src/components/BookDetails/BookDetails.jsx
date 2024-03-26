@@ -1,7 +1,10 @@
-import React from 'react';
-import { useLoaderData, useParams, Link } from 'react-router-dom'; 
-import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import Read from '../Read/Read';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const BookDetails = () => {
     const books = useLoaderData(); 
@@ -11,13 +14,16 @@ const BookDetails = () => {
     const [showRead, setShowRead] = useState(false);
     const [showWishList, setShowWishList] = useState(false); 
 
-    
+    // Bind toggleRead function to the component
     const toggleRead = () => {
         setShowRead(!showRead);
-        setShowWishList(false); 
+        setShowWishList(false);
+        console.log('Show Read:', showRead); // Add this line
     };
-
     
+    
+    
+    // Bind toggleWishList function to the component
     const toggleWishList = () => {
         setShowWishList(!showWishList);
         setShowRead(false); 
@@ -50,13 +56,17 @@ const BookDetails = () => {
                     </div>
                     <div className='flex gap-4'>
                        
+                        
                         <button onClick={toggleRead} className="btn btn-outline px-7 py-4">Read</button>
                         
+                       
                         <button onClick={toggleWishList} className="btn btn-info px-7 py-4">Wishlist</button>
                     </div>
                 </div>
             </div>
-           
+          
+            {showRead && <Read />}
+            <ToastContainer />
         </div>
     );
 };

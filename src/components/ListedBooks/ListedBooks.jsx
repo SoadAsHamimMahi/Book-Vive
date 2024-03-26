@@ -30,9 +30,10 @@ const ListedBooks = () => {
                     <span>Wishlist Books</span>
                 </Link>
                
-                <Outlet></Outlet>
+                
               
             </div>
+            <Outlet></Outlet>
         </div>
     );
 };

@@ -1,9 +1,14 @@
-import React from 'react';
 
 const Read = () => {
+   
     return (
         <div>
-            <h1>read hereeee</h1>
+            {/* <div>
+                {selectBooks.map(select => (
+                    <List key={select.bookId} select={select}></List>
+                ))}
+            </div> */}
+
         </div>
     );
 };
