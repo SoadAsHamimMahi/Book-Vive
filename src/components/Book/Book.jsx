@@ -1,8 +1,12 @@
 import React from 'react';
+import { FaRegStar } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+
 
 const Book = ({ book }) => {
-    const { bookName,tags,author,category,rating,image } = book;
+    const {bookId, bookName,tags,author,category,rating,image } = book;
     return (
+        <Link to={`/BookDetails/${bookId}`}>
         <div className="card w-auto bg-base-100 shadow-xl">
             <figure className="px-6 py-6 bg-gray-100">
                 <img src={image} alt="Shoes" className="rounded-xl h-80" />
@@ -15,14 +19,16 @@ const Book = ({ book }) => {
                     <p>{tags[1]}</p>
                 </div>
                 <h2 className="card-title py-4 text-2xl">{bookName}</h2>
-                <p>By : {author} </p>
+                <p className='text-base'>By : {author} </p>
                 <hr className='my-5' />
                 <div className="flex justify-between mb-6">
-                    <p>{category}</p>
-                    <p>{rating}</p>
+                    <p className='text-xl'>{category}</p>
+                    <p className='flex text-xl gap-2'>{rating} <FaRegStar></FaRegStar> </p>
+                    
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
