@@ -14,6 +14,8 @@ import BookDetails from "./components/BookDetails/BookDetails";
 import WishList from "./components/WishList/WishList";
 import Read from "./components/Read/Read";
 import toast, { Toaster } from 'react-hot-toast';
+import Faq from "./components/Faq/Faq";
+import Pricing from "./components/Pricing/Pricing";
 
 
 
@@ -43,7 +45,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/Pages',
-        element: <PagesToRead></PagesToRead>
+        element: <PagesToRead></PagesToRead>,
+      },
+
+      {
+         path: '/Faq',
+         element: <Faq></Faq>,
+      },
+
+      {
+path: '/Pricing',
+element: <Pricing></Pricing>
       },
      
       {

@@ -29,6 +29,14 @@ const Navbar = () => {
                         ? "pending"
                         : "text-xl hover:text-red-600 hover:border-2 hover:border-red-600 hover:bg-white"
                     }  to = "/Pages">Pages to Read</NavLink></li>
+
+        <li><NavLink  className={({ isActive, isPending }) =>
+                      isActive
+                        ? "flex border-green-600 border-2 font-semibold text-green-600 bg-none text-xl"
+                        : isPending
+                        ? "pending"
+                        : "text-xl hover:text-red-600 hover:border-2 hover:border-red-600 hover:bg-white"
+                    }  to = "/Faq">FAQ</NavLink></li>
     </>
 
     return (
