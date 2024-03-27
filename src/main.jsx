@@ -22,7 +22,7 @@ import Pricing from "./components/Pricing/Pricing";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root> ,
+    element: <Root></Root>,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Read></Read> ,
+            element: <Read></Read>,
           },
           {
             path: "WishList",
@@ -49,15 +49,15 @@ const router = createBrowserRouter([
       },
 
       {
-         path: '/Faq',
-         element: <Faq></Faq>,
+        path: '/Faq',
+        element: <Faq></Faq>,
       },
 
       {
-path: '/Pricing',
-element: <Pricing></Pricing>
+        path: '/Pricing',
+        element: <Pricing></Pricing>
       },
-     
+
       {
         path: '/BookDetails/:bookId',
         element: <BookDetails></BookDetails>,
