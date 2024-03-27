@@ -1,25 +1,11 @@
-import { Toast, toast } from "react-hot-toast"
-
-export const getBookData = () => {
-    let books = []
-    const storedBooks = localStorage.getItem('books')
-    if(storedBooks) {
-        books = JSON.parse(storedBooks)
+export const saveDataToLocalStorage = (book) =>{
+    const savedBook = JSON.parse(localStorage.getItem("books")) || [];
+    const haveBook = savedBook.find((item) => item.bookId === book.bookId);
+    if (haveBook) {
+        alert('Data already exists');
+    } else {
+        savedBook.push(book);
+        localStorage.setItem("books", JSON.stringify(savedBook));
+        alert('Data added successfully');
     }
-
-    return books
-}
-
-export const selectBooks = book => {
-    let books = getBookData()
-    const isExist = books.find (b => b.bookId === book.bookId)
-
-    if (isExist){
-        return toast.error('Already Added');
-
-    }
-
-    books.push(book)
-    localStorage.setItem('books', JSON.stringify(books))
-    toast.success('Book added');
 }
