@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveDataToLocalStorage } from '../../utils';
 
@@ -10,21 +10,30 @@ const BookDetails = () => {
     const idInt = parseInt(bookId);
     const book = books.find(book => book.bookId === idInt);
     const [isBookAdded, setIsBookAdded] = useState(false);
+    const [isWishlisted, setIsWishlisted] = useState(false);
 
     const handleRead = () => {
-        saveDataToLocalStorage(book, "readBooks"); 
+        saveDataToLocalStorage(book, "readBooks");
         setIsBookAdded(true);
     }
 
     const handleWishlist = () => {
-        saveDataToLocalStorage(book, "wishlistBooks"); 
+        const readBooks = JSON.parse(localStorage.getItem("readBooks")) || [];
+        const haveReadBook = readBooks.find((item) => item.bookId === book.bookId);
+
+        if (haveReadBook) {
+           toast.error('You have already read this book');
+        } else {
+            saveDataToLocalStorage(book, "wishlistBooks");
+            setIsWishlisted(true);
+        }
     }
 
     return (
-        <div className="w-11/12 mx-auto my-16">
+        <div className="w-10/12 lg:w-11/12 mx-auto my-8 lg:my-16">
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-12">
-                <div className='bg-base-200 lg:w-1/2 rounded-3xl flex justify-center items-center'>
-                    <img src={book.image} className=" p-4 lg:p-20 rounded-lg" alt="Book Cover" />
+                <div className='bg-base-200 w-11/12 lg:w-1/2 rounded-3xl flex justify-center items-center'>
+                    <img src={book.image} className="p-4 lg:p-20 rounded-lg" alt="Book Cover" />
                 </div>
                 <div className='lg:w-1/2 '>
                     <div>

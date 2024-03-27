@@ -1,26 +1,21 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import List from "../List/List";
 
 const Read = () => {
-   
-    const [selectedReadBook, setSelectedReadBook] = useState([]);
- 
+    const [selectedReadBooks, setSelectedReadBooks] = useState([]);
+
     useEffect(() => {
-
-        const getReadBook = JSON.parse(localStorage.getItem("books")) || [];
-        setSelectedReadBook (getReadBook);
-
-
-    },[])
+        const getReadBooks = JSON.parse(localStorage.getItem("readBooks")) || [];
+        setSelectedReadBooks(getReadBooks);
+    }, []);
 
     return (
         <div>
             <div>
-            {
-                selectedReadBook.map (data => <List key={data.bookId} data={data}></List>)
-            }
+                {selectedReadBooks.map((data) => (
+                    <List key={data.bookId} data={data} />
+                ))}
             </div>
-
         </div>
     );
 };
