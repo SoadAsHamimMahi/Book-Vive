@@ -8,12 +8,12 @@ const Pricing = () => {
     return (
         <div className='mx-auto w-11/12 my-5 lg:my-10'>
             <div className="bg-base-200 rounded-xl h-[100px] w-full flex justify-center items-center mb-10">
-                <h2 className="text-3xl font-bold text-black">Choose the right plan for you</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold text-black">Choose the right plan for you</h2>
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 lg:w-5/6 mx-auto'>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <div className="card-body hover:border-red-700 hover:border-2 hover:shadow-red-700 shadow-2xl transition duration-300">
+                <div className="card bg-base-100 shadow-xl rounded-3xl">
+                    <div className="card-body rounded-3xl hover:border-red-700 hover:border-2 hover:shadow-red-700 shadow-2xl transition duration-300">
                         <div className='bg-red-700 px-4 my-4 w-fit rounded-2xl text-white font-bold '>
                             <p>BEST VALUE</p>
                         </div>
@@ -69,8 +69,8 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <div className="card-body hover:border-green-700 hover:border-2 hover:shadow-green-700 shadow-2xl transition duration-300">
+                <div className="card bg-base-100 rounded-3xl shadow-xl">
+                    <div className="card-body rounded-3xl hover:border-green-700 hover:border-2 hover:shadow-green-700 shadow-2xl transition duration-300">
                         <div className='bg-green-700 px-4 my-4 w-fit rounded-2xl text-white font-bold '>
                             <p>ESSENTIAL PLAN</p>
                         </div>
@@ -127,8 +127,8 @@ const Pricing = () => {
                 </div>
 
 
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <div className="card-body hover:border-blue-700 hover:border-2 hover:shadow-blue-700 shadow-2xl transition duration-300">
+                <div className="card rounded-3xl bg-base-100 shadow-xl">
+                    <div className="card-body rounded-3xl hover:border-blue-700 hover:border-2 hover:shadow-blue-700 shadow-2xl transition duration-300">
                         <div className='bg-blue-700 px-4 my-4 w-fit rounded-2xl text-white font-bold '>
                             <p>ULTIMATE PLAN
 </p>

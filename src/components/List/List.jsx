@@ -2,13 +2,13 @@ import React from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";
 import { RiPagesLine } from "react-icons/ri";
-
+import { Link } from 'react-router-dom';
 
 
 
 const List = ({ data }) => {
 
-    const { bookName, totalPages, author, image, tags, yearOfPublishing, category, rating } = data;
+    const { bookId, bookName, totalPages, author, image, tags, yearOfPublishing, category, rating } = data;
 
     return (
         <div className="border-gray-200 border-2 rounded-3xl flex gap-8 my-8 mx-auto w-11/12">
@@ -58,7 +58,7 @@ const List = ({ data }) => {
                         </div>
                        </div>
 
-                        <button className="btn btn-success rounded-2xl text-white">View Details</button>
+                       <Link to ={`/BookDetails/${bookId}`}> <button className="btn btn-success rounded-2xl text-white">View Details</button></Link>
 
                     </div>
                 </div>
