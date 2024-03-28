@@ -1,6 +1,6 @@
 # Book Vibe
 
-Live Link: (https://6604a8bac8196b78269add4d--delicate-bonbon-8bee95.netlify.app/)
+Live Link: (https://66054ff9388f5a146eb3279e--delicate-bonbon-8bee95.netlify.app/)
 
 Features of this project:
 
