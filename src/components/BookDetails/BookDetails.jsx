@@ -38,25 +38,25 @@ const BookDetails = () => {
                 <div className='lg:w-1/2 '>
                     <div>
                         <h1 className="text-3xl lg:text-5xl font-bold mb-6">{book.bookName}</h1>
-                        <p className="mb-4">By: {book.author}</p>
+                        <p className="mb-4 text-xl">By: {book.author}</p>
                         <hr className="mb-4" />
-                        <p className="mb-4">{book.category}</p>
+                        <p className="mb-4 text-xl">{book.category}</p>
                         <hr className="mb-4" />
-                        <p className="py-6 mb-4">{book.review}</p>
-                        <div className="mb-4 flex gap-4 items-center">
+                        <p className="py-6 mb-4 text-xl">{book.review}</p>
+                        <div className="mb-4 flex gap-4 items-center text-xl">
                             <p>Tag</p>
                             <div className='p-2 rounded-xl bg-green-100'><p className='text-green-700 font-base font-semibold'>#{book.tags[0]}</p></div>
                             <div className='p-2 rounded-xl bg-green-100 font-semibold'><p className='text-green-700 font-base'>#{book.tags[1]}</p></div>
                         </div>
                         <hr className="mb-4" />
-                        <p className="mb-4">Number of Pages: {book.totalPages}</p>
-                        <p className="mb-4">Publisher: {book.publisher}</p>
-                        <p className="mb-4">Year of Publishing: {book.yearOfPublishing}</p>
-                        <p className="mb-4">Rating: {book.rating}</p>
+                        <p className="mb-4 text-xl"><span className='font-semibold'>Number of Pages:</span> {book.totalPages}</p>
+                        <p className="mb-4 text-xl"><span className='font-semibold'>Author: </span> {book.publisher}</p>
+                        <p className="mb-4 text-xl"><span className='font-semibold'>Year of Publishing:</span> {book.yearOfPublishing}</p>
+                        <p className="mb-4 text-xl"><span className='font-semibold'>Rating:</span> {book.rating}</p>
                     </div>
-                    <div className='flex gap-4'>
+                    <div className='flex gap-4 my-8'>
                         <button onClick={handleRead} className="btn btn-outline px-7 py-4">Read</button>
-                        <button onClick={handleWishlist} className="btn btn-info px-7 py-4">Wishlist</button>
+                        <button onClick={handleWishlist} className="btn btn-info px-7 py-4 ">Wishlist</button>
                     </div>
                 </div>
             </div>
