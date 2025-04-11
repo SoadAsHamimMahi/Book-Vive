@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeBanner from '../HomeBanner/HomeBanner';
 import Books from '../Books/Books';
+import Footer from '../Footer';
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             
            <HomeBanner></HomeBanner>
            <Books></Books>
+          
         </div>
     );
 };

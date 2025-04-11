@@ -17,59 +17,56 @@ import toast, { Toaster } from 'react-hot-toast';
 import Faq from "./components/Faq/Faq";
 import Pricing from "./components/Pricing/Pricing";
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home />,
       },
       {
         path: '/Listed',
-        element: <ListedBooks></ListedBooks>,
+        element: <ListedBooks />,
         children: [
           {
             index: true,
-            element: <Read></Read>,
+            element: <Read />,
           },
           {
             path: "WishList",
-            element: <WishList></WishList>,
+            element: <WishList />,
           },
         ],
       },
       {
         path: '/Pages',
-        element: <PagesToRead></PagesToRead>,
+        element: <PagesToRead />,
       },
-
       {
         path: '/Faq',
-        element: <Faq></Faq>,
+        element: <Faq />,
       },
-
       {
         path: '/Pricing',
-        element: <Pricing></Pricing>
+        element: <Pricing />,
       },
-
       {
         path: '/BookDetails/:bookId',
-        element: <BookDetails></BookDetails>,
-        loader: () => fetch('../Books.json')
-      }
-    ]
+        element: <BookDetails />,
+        loader: () => fetch('../Books.json'),
+      },
+    ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <Toaster></Toaster>
+    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white transition-colors font-sans">
+      <RouterProvider router={router} />
+      <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
+    </div>
   </React.StrictMode>
 );

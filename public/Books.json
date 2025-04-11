@@ -115,6 +115,19 @@
         "tags": ["Epic Fantasy", "Adventure"],
         "publisher": "Allen & Unwin",
         "yearOfPublishing": 1954
+      },
+      {
+        "bookId": 10,
+        "bookName": "Jane Eyre",
+        "author": "Charlotte Brontë",
+        "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8329431_p_v10_ab.jpg",
+        "review": "A passionate story of a young woman's resilience and quest for love and independence.",
+        "totalPages": 532,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": ["Romance", "Gothic"],
+        "publisher": "Smith, Elder & Co.",
+        "yearOfPublishing": 1847
       }
   ]
   
