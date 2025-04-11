@@ -94,7 +94,7 @@
         "bookId": 8,
         "bookName": "The Hunger Games",
         "author": "Suzanne Collins",
-        "image": "https://www.thebookshop.es/productimages/1200/the-hunger-games---suzanne-collins_269889.jpg",
+        "image": "https://m.media-amazon.com/images/I/61zo9L2qSvL._SL1500_.jpg",
         "review": "A thrilling dystopian novel set in a post-apocalyptic society where teenagers fight to the death in a televised event.",
         "totalPages": 374,
         "rating": 4.2,
@@ -128,6 +128,32 @@
         "tags": ["Romance", "Gothic"],
         "publisher": "Smith, Elder & Co.",
         "yearOfPublishing": 1847
+      },
+      {
+        "bookId": 11,
+        "bookName": "The Book Thief",
+        "author": "Markus Zusak",
+        "image": "https://peterviney.com/wp-content/uploads/2014/03/movies-the-book-thief-poster.jpg",
+        "review": "A haunting story narrated by Death, capturing a girl's life in Nazi Germany.",
+        "totalPages": 584,
+        "rating": 4.6,
+        "category": "Historical Fiction",
+        "tags": ["War", "Narrative"],
+        "publisher": "Picador",
+        "yearOfPublishing": 2005
+      },
+      {
+        "bookId": 12,
+        "bookName": "Brave New World",
+        "author": "Aldous Huxley",
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/62/BraveNewWorld_FirstEdition.jpg",
+        "review": "A provocative vision of a controlled, conformist future society.",
+        "totalPages": 311,
+        "rating": 4.3,
+        "category": "Science Fiction",
+        "tags": ["Dystopia", "Philosophy"],
+        "publisher": "Chatto & Windus",
+        "yearOfPublishing": 1932
       }
   ]
   
