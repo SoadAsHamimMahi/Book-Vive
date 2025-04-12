@@ -1,6 +1,6 @@
 # Book Vibe
 
-Live Link: (https://66054ff9388f5a146eb3279e--delicate-bonbon-8bee95.netlify.app/)
+Live Link: (https://book-vive-mu.vercel.app/)
 
 Features of this project:
 
